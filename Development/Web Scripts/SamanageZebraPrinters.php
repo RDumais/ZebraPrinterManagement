@@ -119,5 +119,3 @@ if (curl_error($getZebraTicketCurl)) {
         }
     }
 }
-
-//http://lsc-sv-web1/automations/samanage/SamanageZebraPrinters.php?currentCount=0&previousCount=5999&printerType=600&requesterEmail=BLarose@linemaster.com&assigneeEmail=RDumais@linemaster.com&configurationItem=45645646
