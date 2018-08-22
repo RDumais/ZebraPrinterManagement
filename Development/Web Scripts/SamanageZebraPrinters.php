@@ -74,7 +74,6 @@ if (curl_error($getZebraTicketCurl)) {
                                  <configuration_item_id>' . $configurationItem . '</configuration_item_id>
                             </configuration_item_ids>
                           </incident>';
-    {"change": {"name": "Install APAR {{APAR Number}}","state": "Open","description": "{{APAR Description}}","change_plan": "<ol><li>Backup any affected production objects, particularly site versions.<li>Deploy the change to Development<li>Merge Old Vendor, New Vendor, and Site together.<li>Vendorize the resulting merges.<li>Script out the merged files<li>Deploy the change to Pilot<li>Deploy any merged files.<li>Test according to the Test Plan.<li>Deploy the change to Production.<li>Deploy any merged files.<li>Redeploy/Repair Third Party Products.</ol>","test_plan": "<p>Test {{Form}} for the APAR's Behavior:</p><p>\"{{APAR Impact}}\"</p><p>Test any files that were merged.</p>","custom_fields_values": {"custom_fields_value": [{"name": "Does the change introduce risk?","value": "{{Does the change introduce risk?}}"},{"name": "Has the intended use of the software changed?","value": "{{Has the intended use of the software changed?}}"}]}}}
 
     //initialize curl request to set QA manage as requester (instead of WUG) and set the IT tech as the assignee
     $putRequesterCurl = curl_init('https://api.samanage.com/incidents/' . $zebraID . '.xml');
